@@ -55,6 +55,12 @@
     <Compile Include="UI\BabyInfo.Designer.cs">
       <DependentUpon>BabyInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="UI\Magazine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\Magazine.Designer.cs">
+      <DependentUpon>Magazine.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -65,6 +71,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="UI\BabyInfo.resx">
       <DependentUpon>BabyInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\Magazine.resx">
+      <DependentUpon>Magazine.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
