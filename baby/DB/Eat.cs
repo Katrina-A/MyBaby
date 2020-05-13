@@ -14,5 +14,8 @@ namespace baby
         public int Amount { get; set; }
         [DataMember]
         public DateTime Start { get; set; }
+        [DataMember]
+        public DateTime End { get; set; }
+
     }
 }

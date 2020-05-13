@@ -48,7 +48,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DB\Baby.cs" />
+    <Compile Include="DB\Breast.cs" />
     <Compile Include="DB\Eat.cs" />
+    <Compile Include="DB\Milk.cs" />
+    <Compile Include="DB\Vaccinations.cs" />
     <Compile Include="UI\BabyInfo.cs">
       <SubType>Form</SubType>
     </Compile>
