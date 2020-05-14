@@ -12,34 +12,24 @@ namespace baby
 {
     public partial class Form1 : Form
     {
+        BabyDB db;
+
         public Form1()
         {
             InitializeComponent();
+            db = new BabyDB();
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
+        
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            new BabyInfo(db.AddBaby()).ShowDialog();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void tabPage12_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button18_Click(object sender, EventArgs e)
-        {
-
+            new Magazine().ShowDialog();
         }
     }
 }

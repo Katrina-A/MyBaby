@@ -131,6 +131,7 @@
             this.textBox23 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.tabPage5 = new System.Windows.Forms.TabPage();
+            this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.button5 = new System.Windows.Forms.Button();
             this.textBox28 = new System.Windows.Forms.TextBox();
             this.label28 = new System.Windows.Forms.Label();
@@ -143,7 +144,6 @@
             this.textBox31 = new System.Windows.Forms.TextBox();
             this.textBox30 = new System.Windows.Forms.TextBox();
             this.textBox29 = new System.Windows.Forms.TextBox();
-            this.comboBox8 = new System.Windows.Forms.ComboBox();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
@@ -225,7 +225,6 @@
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 318F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(451, 540);
             this.tableLayoutPanel1.TabIndex = 1;
-            this.tableLayoutPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.tableLayoutPanel1_Paint_1);
             // 
             // label1
             // 
@@ -337,6 +336,7 @@
             this.button1.TabIndex = 13;
             this.button1.Text = "Добавить или изменить информацию";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -346,6 +346,7 @@
             this.button2.TabIndex = 14;
             this.button2.Text = "Журнал";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // tabPage2
             // 
@@ -748,7 +749,6 @@
             this.tabPage12.TabIndex = 1;
             this.tabPage12.Text = "Сон";
             this.tabPage12.UseVisualStyleBackColor = true;
-            this.tabPage12.Click += new System.EventHandler(this.tabPage12_Click);
             // 
             // button12
             // 
@@ -1070,7 +1070,6 @@
             this.button18.TabIndex = 24;
             this.button18.Text = "Сохранить";
             this.button18.UseVisualStyleBackColor = true;
-            this.button18.Click += new System.EventHandler(this.button18_Click);
             // 
             // button19
             // 
@@ -1177,6 +1176,14 @@
             this.tabPage5.Text = "Настроение";
             this.tabPage5.UseVisualStyleBackColor = true;
             // 
+            // comboBox8
+            // 
+            this.comboBox8.FormattingEnabled = true;
+            this.comboBox8.Location = new System.Drawing.Point(122, 90);
+            this.comboBox8.Name = "comboBox8";
+            this.comboBox8.Size = new System.Drawing.Size(200, 21);
+            this.comboBox8.TabIndex = 26;
+            // 
             // button5
             // 
             this.button5.Location = new System.Drawing.Point(169, 282);
@@ -1281,21 +1288,15 @@
             this.textBox29.Size = new System.Drawing.Size(122, 20);
             this.textBox29.TabIndex = 0;
             // 
-            // comboBox8
-            // 
-            this.comboBox8.FormattingEnabled = true;
-            this.comboBox8.Location = new System.Drawing.Point(122, 90);
-            this.comboBox8.Name = "comboBox8";
-            this.comboBox8.Size = new System.Drawing.Size(200, 21);
-            this.comboBox8.TabIndex = 26;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(459, 402);
             this.Controls.Add(this.tabControl1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "\"Мой малыш\"";
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);

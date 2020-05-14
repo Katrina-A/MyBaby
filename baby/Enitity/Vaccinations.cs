@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace baby
 {
-    [DataContract]
+    [Serializable]
     public enum Vaccinations
     {
         Гепатит_В,

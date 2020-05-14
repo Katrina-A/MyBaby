@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace baby.UI
+namespace baby
 {
     public partial class Magazine : Form
     {

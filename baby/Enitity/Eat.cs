@@ -7,14 +7,12 @@ using System.Threading.Tasks;
 
 namespace baby
 {
-    [DataContract]
+    [Serializable]
     public class Eat
     {
-        [DataMember]
+        public string Name { get; set; }
         public int Amount { get; set; }
-        [DataMember]
         public DateTime Start { get; set; }
-        [DataMember]
         public DateTime End { get; set; }
 
     }

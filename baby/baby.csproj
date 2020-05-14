@@ -47,11 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DB\Baby.cs" />
-    <Compile Include="DB\Breast.cs" />
-    <Compile Include="DB\Eat.cs" />
-    <Compile Include="DB\Milk.cs" />
-    <Compile Include="DB\Vaccinations.cs" />
+    <Compile Include="DB\BabyDB.cs" />
+    <Compile Include="Enitity\Baby.cs" />
+    <Compile Include="Enitity\Breast.cs" />
+    <Compile Include="Enitity\Eat.cs" />
+    <Compile Include="Enitity\Milk.cs" />
+    <Compile Include="Enitity\Vaccinations.cs" />
     <Compile Include="UI\BabyInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,5 +104,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
