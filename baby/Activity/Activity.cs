@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 namespace baby
 {
     [DataContract]
-    public class Eat
+    public class Activity
     {
         [DataMember]
         public int ID { get; set; }
@@ -18,8 +18,5 @@ namespace baby
         public string Time { get; set; }
         [DataMember]
         public string Comment { get; set; }
-        [DataMember]
-        public EatEnum EatEnum { get; set; }
-
     }
 }

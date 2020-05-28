@@ -1,17 +1,16 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Runtime.Serialization;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace baby
 {
-    [DataContract]
-    public enum Breast
+    public enum EatEnum
     {
-        Левая,
-        Правая,
-        Обе
+        Кормление_грудью,
+        Бутылочка,
+        Прикорм,
+        Сцеживание
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.Serialization.Formatters.Binary;
+using System.Runtime.Serialization.Json;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,38 +11,41 @@ namespace baby
 {
      public class BabyDB
     {
-        public List<Baby> baby { get; set; } = new List<Baby>();
-        public string filename = "baby.all";
-        BinaryFormatter bf = new BinaryFormatter();
+        public List<Baby> baby = new List<Baby>();
 
+        int AutoIncrement = 1;
 
-        public void Load()
+        public List<Baby> babyinfo { get => baby; }
+
+        DataContractJsonSerializer JsonSerializer = new DataContractJsonSerializer(typeof(List<Baby>));
+
+        public void SaveBaby()
         {
-            if (!File.Exists(filename))
-                return;
-            using (FileStream fileStream = new FileStream(filename, FileMode.Open, FileAccess.Read))
+            using(FileStream fs = new FileStream("baby.json", FileMode.Create, FileAccess.Write))
             {
-                bf.Deserialize(fileStream);
+                fs.Write(BitConverter.GetBytes(AutoIncrement), 0, 4);
+                JsonSerializer.WriteObject(fs, baby);
             }
         }
 
-        public void Save()
+        public BabyDB()
         {
-            using (FileStream fileStream = new FileStream(filename, FileMode.Create, FileAccess.Write))
+            if (!File.Exists("baby.json"))
+                return;
+            using (FileStream fs = new FileStream("baby.json", FileMode.Open, FileAccess.Read))
             {
-                bf.Serialize(fileStream, baby);
+                byte[] array = new byte[4];
+                fs.Read(array, 0, 4);
+                AutoIncrement = BitConverter.ToInt32(array, 0);
+                baby = (List<Baby>)JsonSerializer.ReadObject(fs);
             }
         }
 
         public Baby AddBaby()
         {
-            Baby _baby = new Baby
-            {
-                Name = "Имя ребенка"
-            };
-            baby.Add(_baby);
-            return _baby;
-
+            var Baby = new Baby { ID = AutoIncrement++};
+            baby.Add(Baby);
+            return Baby;
         }
     }
 }

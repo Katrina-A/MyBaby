@@ -12,24 +12,23 @@ namespace baby
 {
     public partial class Form1 : Form
     {
-        BabyDB db;
-
+        BabyDB babyDB;
         public Form1()
         {
             InitializeComponent();
-            db = new BabyDB();
+            babyDB = new BabyDB();
         }
 
-        
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
-            new BabyInfo(db.AddBaby()).ShowDialog();
+            new Magazine().Show();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            new Magazine().ShowDialog();
+            new BabyInfo(babyDB.AddBaby()).ShowDialog();
+            babyDB.SaveBaby();
         }
     }
 }

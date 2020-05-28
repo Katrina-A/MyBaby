@@ -47,17 +47,51 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activity\Activity.cs" />
+    <Compile Include="DB\ActivityDB.cs" />
     <Compile Include="DB\BabyDB.cs" />
+    <Compile Include="DB\EatDB.cs" />
+    <Compile Include="DB\HealthDB.cs" />
+    <Compile Include="DB\MoodDB.cs" />
     <Compile Include="Enitity\Baby.cs" />
     <Compile Include="Enitity\Breast.cs" />
     <Compile Include="Enitity\Eat.cs" />
+    <Compile Include="Enitity\EatEnum.cs" />
     <Compile Include="Enitity\Milk.cs" />
-    <Compile Include="Enitity\Vaccinations.cs" />
+    <Compile Include="Event\Event.cs" />
+    <Compile Include="Event\EventDB.cs" />
+    <Compile Include="Health\Vaccinations.cs" />
+    <Compile Include="Health\Health.cs" />
+    <Compile Include="Mood\Mood.cs" />
+    <Compile Include="UI\ActivityFormAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ActivityFormAdd.Designer.cs">
+      <DependentUpon>ActivityFormAdd.cs</DependentUpon>
+    </Compile>
     <Compile Include="UI\BabyInfo.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UI\BabyInfo.Designer.cs">
       <DependentUpon>BabyInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EatFormAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\EatFormAdd.Designer.cs">
+      <DependentUpon>EatFormAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\EventFormAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\EventFormAdd.Designer.cs">
+      <DependentUpon>EventFormAdd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\HealthformAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\HealthformAdd.Designer.cs">
+      <DependentUpon>HealthformAdd.cs</DependentUpon>
     </Compile>
     <Compile Include="UI\Magazine.cs">
       <SubType>Form</SubType>
@@ -73,8 +107,26 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\MoodFormAdd.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MoodFormAdd.Designer.cs">
+      <DependentUpon>MoodFormAdd.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="UI\ActivityFormAdd.resx">
+      <DependentUpon>ActivityFormAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UI\BabyInfo.resx">
       <DependentUpon>BabyInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\EatFormAdd.resx">
+      <DependentUpon>EatFormAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\EventFormAdd.resx">
+      <DependentUpon>EventFormAdd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\HealthformAdd.resx">
+      <DependentUpon>HealthformAdd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UI\Magazine.resx">
       <DependentUpon>Magazine.cs</DependentUpon>
@@ -91,6 +143,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="UI\MoodFormAdd.resx">
+      <DependentUpon>MoodFormAdd.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

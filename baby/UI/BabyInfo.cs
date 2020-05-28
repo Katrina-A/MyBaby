@@ -46,7 +46,6 @@ namespace baby
             baby.Age = textBox4.Text;
             baby.Weight = textBox5.Text;
             baby.Height = textBox6.Text;
-            db.Save();
         }
     }
 }
