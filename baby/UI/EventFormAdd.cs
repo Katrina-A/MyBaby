@@ -32,6 +32,7 @@ namespace baby
             @event.Name = textBox1.Text;
             @event.Time = textBox2.Text;
             @event.Comment = textBox3.Text;
+            Close();
         }
     }
 }

@@ -28,6 +28,7 @@ namespace baby
             activity.Name = textBox3.Text;
             activity.Time = textBox1.Text;
             activity.Comment = textBox2.Text;
+            Close();
         }
     }
 }

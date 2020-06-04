@@ -26,6 +26,7 @@ namespace baby
         {
             health.Vaccinations = (Vaccinations)comboBox1.SelectedItem;
             health.Time = textBox1.Text;
+            Close();
         }
     }
 }

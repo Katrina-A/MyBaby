@@ -11,11 +11,9 @@ namespace baby
 {
      public class BabyDB
     {
-        public List<Baby> baby = new List<Baby>();
+        Baby baby = new Baby();
 
-        int AutoIncrement = 1;
-
-        public List<Baby> babyinfo { get => baby; }
+        public Baby babyinfo { get => baby; }
 
         DataContractJsonSerializer JsonSerializer = new DataContractJsonSerializer(typeof(List<Baby>));
 
@@ -23,7 +21,6 @@ namespace baby
         {
             using(FileStream fs = new FileStream("baby.json", FileMode.Create, FileAccess.Write))
             {
-                fs.Write(BitConverter.GetBytes(AutoIncrement), 0, 4);
                 JsonSerializer.WriteObject(fs, baby);
             }
         }
@@ -34,18 +31,8 @@ namespace baby
                 return;
             using (FileStream fs = new FileStream("baby.json", FileMode.Open, FileAccess.Read))
             {
-                byte[] array = new byte[4];
-                fs.Read(array, 0, 4);
-                AutoIncrement = BitConverter.ToInt32(array, 0);
-                baby = (List<Baby>)JsonSerializer.ReadObject(fs);
+                baby = (Baby)JsonSerializer.ReadObject(fs);
             }
-        }
-
-        public Baby AddBaby()
-        {
-            var Baby = new Baby { ID = AutoIncrement++};
-            baby.Add(Baby);
-            return Baby;
         }
     }
 }

@@ -38,6 +38,7 @@ namespace baby
             eat.EatEnum = (EatEnum)comboBox1.SelectedItem;
             eat.Time = textBox1.Text;
             eat.Comment = textBox2.Text;
+            Close();
         }
     }
 }
