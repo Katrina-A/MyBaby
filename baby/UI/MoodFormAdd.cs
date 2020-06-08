@@ -33,6 +33,7 @@ namespace baby
             mood.Name = textBox1.Text;
             mood.Time = textBox2.Text;
             mood.Comment = textBox3.Text;
+            Close();
         }
     }
 }
